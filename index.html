@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários Html</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h2>Projeto Traveller</h2>
+    <form name="dados" id="dados" action="" method="post">
+        <fieldset>
+            <legend>Dados de Acesso:</legend>
+            <p>
+                <label for="nome">Nome do usuário: </label>
+                <input type="text" id="nome" placeholder="Ex: usuário123" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" placeholder="Ex: 123456">
+            </p>
+        </fieldset>
+        <fieldset>
+            <p>
+                <label for="mail">Seu email:</label>
+                <input type="email" id="mail">
+            </p>
+            <p>
+                <label for="site">Seu site:</label>
+                <input type="url" id="site" disabled>
+            </p>
+            <p>
+                <label for="foto">Enviar Foto:</label>
+                <input type="file" id="foto">
+            </p>
+            <p>
+                <label for="busca">Procurar:</label>
+                <input type="search" id="busca">
+            </p>
+            <p>
+                <label for="numero">Número da Suíte:</label>
+                <input type="number" id="numero" min="0" max="180" step="10">
+            </p>
+            <p>
+                <label for="range">Valor das diárias:</label>
+                <input type="range" id="range" min="5" max="500" step="5" value="100">
+            </p>
+            <p>
+                <label for="tele">Telefone do hotel:</label>
+                <input type="tel" id="tele" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" readonly>
+            </p>
+            <p>
+                <label for="cor">Selecione a cor:</label>
+                <input type="color" id="cor" value="#1cf9d3">
+            </p>
+        </fieldset>
+        <fieldset>
+            <h3>Selecione o tipo de acomodação:</h3>
+            <input type="radio" name="suite" id="first">
+            <label for="first">Suíte Premium</label>
+            <input type="radio" name="suite" id="second">
+            <label for="second">Suíte Class</label>
+            <input type="radio" name="suite" id="master">
+            <label for="master">Suíte Master</label>
+        </fieldset>
+        <fieldset>
+            <h3>Selecione suas opções:</h3>
+            <input type="checkbox" name="opcao" id="opcao1">
+            <label for="opcao1">Café da manhã</label>
+            <input type="checkbox" name="opcao" id="opcao2">
+            <label for="opcao2">Estacionamento</label>
+            <input type="checkbox" name="opcao" id="opcao3">
+            <label for="opcao3">Serviço de concierge</label>
+        </fieldset>
+        <fieldset>
+            <h2>Tipo de suíte:</h2>
+            <select id="suite" required>
+                <option value="0">Selecione uma opção</option>
+                <option value="1">Class</option>
+                <option value="2">Premium</option>
+                <option value="3">Master</option>
+            </select>
+            <label for="museus">Selecione o museu</label>
+            <input list="museus__sp" id="museus" name="museus">
+                <datalist id="museus__sp">
+                <option value="MASP">
+                <option value="MIS">
+                <option value="Japan House">
+                <option value="Museu Catavento">
+                <option value="Museu do Futebol">                    
+                <option value="Pinacoteca de São Paulo">
+                </datalist>
+        </fieldset>
+        <fieldset>
+            <label for="textArea">Sua Mensagem</label><br>
+            <!-- formatar no css sempre resize=none -->
+            <textarea name="textArea" id="textArea"></textarea>
+        </fieldset>
+
+        <input type="submit" id="enviar" value="Enviar Dados">
+        <input type="reset" id="limpar" value="Limpar dados">
+        <input type="button" id="botao" value="Chamar JS">
+    </form>
+</body>
+
+</html>
